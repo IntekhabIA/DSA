@@ -4,6 +4,9 @@
         "ostream": "cpp",
         "xutility": "cpp",
         "utility": "cpp",
-        "initializer_list": "cpp"
-    }
+        "initializer_list": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
 }
