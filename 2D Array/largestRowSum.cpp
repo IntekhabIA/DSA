@@ -40,7 +40,7 @@ int main(){
         }
     }
 
-    printarray(arr,3,3);
+    printarray(arr,3,3); 
     largestRowSum(arr,3,3);
 
 }
