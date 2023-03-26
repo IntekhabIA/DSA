@@ -10,7 +10,10 @@
         "algorithm": "cpp",
         "list": "cpp",
         "xtree": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "cmath": "cpp",
+        "xlocale": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "scm.diffDecorations": "none"
 }
