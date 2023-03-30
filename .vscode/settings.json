@@ -12,7 +12,8 @@
         "xtree": "cpp",
         "xstring": "cpp",
         "cmath": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "scm.diffDecorations": "none"
