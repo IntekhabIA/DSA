@@ -15,7 +15,6 @@ bool isSafe(int x, int y, int n, vector<vector<int>> visited, vector<vector<int>
 void solve(vector<vector<int>> &m, int n, vector<string>& ans, int x,
             int y, vector<vector<int>> visited, string path ){
                 //base case
-                int del = 0;
                 if(x == n-1 && y == n-1){
                     ans.push_back(path);
                     return;
