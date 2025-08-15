@@ -9,7 +9,7 @@ void update2(int &n){
     n++;
 }
 
-&int func(int a){
+int func(int a){
     int num = a;
     int& ans = num;
     return ans; 

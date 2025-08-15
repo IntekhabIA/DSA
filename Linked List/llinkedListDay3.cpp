@@ -36,7 +36,6 @@ int main(){
     third -> next = fourth;
     fourth -> next = fifth;
     fifth -> next = NULL;
-    cout << "here";
     print(head);
 
     return 0;
