@@ -62,8 +62,6 @@ int main(){
         s.pop();
     }cout << endl;
     s.pop();
-    s.pop();
-    cout << "Size of Stack : " << s.getSize() << endl;
 
     return 0;
 }
