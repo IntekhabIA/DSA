@@ -30,6 +30,20 @@ void insertAtBottom(stack<int> &s){
     solve(s, target);
 }
 
+void reverseStack(stack<int> &s){
+    //base case
+    if(s.empty()) {
+        return;
+    }
+
+    int target = s.top();
+    s.pop();
+
+    //reverse stack
+    reverseStack(s);
+    //insert at bottom target
+    solve(s, target);
+}
 
 
 
@@ -42,7 +56,8 @@ int main(){
     s.push(50);
     s.push(60);
 
-    insertAtBottom(s);
+    reverseStack(s);
+
 
 
     cout << "Top element: " << s.top() << endl;
