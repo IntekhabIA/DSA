@@ -41,7 +41,8 @@ class Solution {
                         return false;
                     }
                 }
-
+            }
+            // After checking everything stack is empty
                 if(st.empty()){
                     //valid
                     return true;
@@ -49,16 +50,14 @@ class Solution {
                 else {
                     return false;
                 }
-
-            }
         }
 };
 
 int main(){
-    string s = "{{[]}}";
+    string s = "{(((([{}]))))}";
     Solution sol;
     
-    if(sol.isValid(s))
+    if(sol.isValid(s) == true)
         cout << s << " is valid " << endl;
     else
         cout << s << " is invalid " << endl;
