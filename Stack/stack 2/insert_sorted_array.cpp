@@ -38,18 +38,28 @@ void sortStack(stack<int> &s) {
 
 int main() {
   stack<int> s;
-  s.push(7);
-  s.push(11);
-  s.push(3);
-  s.push(5);
-  s.push(9);
+//   s.push(7);
+//   s.push(11);
+//   s.push(3);
+//   s.push(5);
+//   s.push(9);
+
+    stack<int> st;
+    st.push(0);
+    st.push(10);
+    st.push(5);
+    st.push(100);
+    st.push(11);
+
+    sortStack(st);
+
 
   sortStack(s);
 
   cout << "Printing" << endl;
-  while(!s.empty()) {
-          cout << s.top() << " ";
-          s.pop();
+  while(!st.empty()) {
+          cout << st.top() << " ";
+          st.pop();
   }
   cout << endl;
   return 0;
