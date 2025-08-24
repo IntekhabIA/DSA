@@ -1,66 +1,55 @@
 #include <iostream>
-#include<stack>
+#include <stack>
+
 using namespace std;
 
-void insertSorted(stack<int>& s, int target) {
-        //base case
-        if(s.empty()) {
-                s.push(target);
-                return;
-        }
-        if(s.top() >= target) {
-                s.push(target);
-                return;
-        }
+void insertSorted(stack<int> &s, int target){
+    //base case
+    if(s.empty()){
+        s.push(target);
+        return;
+    }
+    if(s.top() >= target){
+        s.push(target);
+        return;
+    }
 
-        int topElement = s.top();
-        s.pop();
-        insertSorted(s, target);
+    int topElement = s.top();
+    s.pop();
+    insertSorted(s,target);
 
-        //BT
-        s.push(topElement);
+    //Back Track
+    s.push(topElement);
 }
 
-void sortStack(stack<int> &s) {
-        //base case
-        if(s.empty()) {
-                return;
-        }
+void sortStack(stack<int> &s){
+    //base case
+    if(s.empty()){
+        return;
+    }
+    int topElement = s.top();
+    s.pop();
 
-        int topElement = s.top();
-        s.pop();
+    sortStack(s);
 
-        sortStack(s);
-
-        insertSorted(s, topElement);
+    insertSorted(s, topElement);
 }
 
+int main(){
+    stack<int> s;
+    s.push(7);
+    s.push(11);
+    s.push(3);
+    s.push(5);
+    s.push(9);
 
-int main() {
-  stack<int> s;
-//   s.push(7);
-//   s.push(11);
-//   s.push(3);
-//   s.push(5);
-//   s.push(9);
+    sortStack(s);
 
-    stack<int> st;
-    st.push(0);
-    st.push(10);
-    st.push(5);
-    st.push(100);
-    st.push(11);
+    cout << "Print stack: " << endl;
+    while(!s.empty()){
+        cout << s.top() << " ";
+        s.pop();
+    } cout << endl;
+    return 0;
 
-    sortStack(st);
-
-
-  sortStack(s);
-
-  cout << "Printing" << endl;
-  while(!st.empty()) {
-          cout << st.top() << " ";
-          st.pop();
-  }
-  cout << endl;
-  return 0;
 }
