@@ -70,7 +70,5 @@ int main() {
           cout << ans2[i] << " ";
   }cout << endl;
 
-
-
   return 0;
 }
